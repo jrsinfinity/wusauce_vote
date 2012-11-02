@@ -10,5 +10,6 @@ This framework was built by [Andrew Hess](https://github.com/andhess) and [Phili
 The code provides a basic foundation to quickly get started with a php application that connects with Twilio.
 
 #Notes
-*Be sure to set Twilio to connect with call.php and sms.php for calls and texts, respectively.
-*Our application runs on Heroku, the dbOpen() function provided uses credentials from a config file.
+* Be sure to set Twilio to connect with call.php and sms.php for calls and texts, respectively.
+
+* Our application runs on Heroku, the dbOpen() function provided uses credentials from a config file.
