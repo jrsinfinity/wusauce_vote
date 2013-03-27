@@ -24,7 +24,7 @@ $message =  clean_vote( $_POST[ 'Body' ] );
 // This is the heart of the whole application!
 if ( valid_vote( $message ) ){
 	vote( $number, $vote ); 
-
+}
 elseif ( !empty($from) { 
 	send_voting_choices( $from );
 } else {
