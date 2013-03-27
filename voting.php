@@ -11,7 +11,11 @@ function has_voted( $number ){
         // PHP sucks for returning a single mysql value
         $count = mysql_fetch_array( $attempt );
         mysql_close();
-        return $count[0]; 
+        if ( (int)$count[0] != 0 ){
+            return true;
+        }else{
+            return false;
+        }
         // if count 1 -> true
         // if count 0 -> false
     }
