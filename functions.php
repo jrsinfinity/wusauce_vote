@@ -17,7 +17,8 @@ function valid_vote( $input ){
         return false;
     }
     require('choices.php');
-	return in_array( $input , $choices );
+    // Note that we do integer, not string, keys
+	return in_array( intval( $input ) , $choices );
 }
 
 /*
