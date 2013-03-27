@@ -40,7 +40,7 @@ to SMS-optimized string
 */
 function sms_choices( ){
 	$sms = "Text the number to vote:";
-
+    require('choices.php');
 	foreach ($choices as $number => $choice) {
 	    $sms .=  " $number => $choice ";
 	}
