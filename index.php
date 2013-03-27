@@ -33,7 +33,7 @@
           </tr>
         <?php
           require('application.php');
-          foreach ($choices as $number => $choice) {
+          foreach ( $choices as $number => $choice ){
             echo "<tr>
                     <td>$number</td>
                     <td>$choice</td>
