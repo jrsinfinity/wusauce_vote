@@ -25,7 +25,7 @@
       <h1><?php echo getenv('TWILIO_NUMBER'); ?></h1>
 
       <div class="well">
-        <table>
+        <table class="table table-hover">
           <tr>
             <th class="span1">ID</th>
             <th class="span3">Team</th>
