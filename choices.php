@@ -7,11 +7,11 @@ the brief voting period.
 */
 
 $choices = array( 
-	1 => 'Swing',
-	2 => 'Raas',
-	3 => 'WUCypher',
-	4 => 'ABDC',
-	5 => 'Chaahat',
-	6 => 'Bhangra',
-	7 => 'WUStyle'
+	"1" => 'Swing',
+	"2" => 'Raas',
+	"3" => 'WUCypher',
+	"4" => 'ABDC',
+	"5" => 'Chaahat',
+	"6" => 'Bhangra',
+	"7" => 'WUStyle'
 );

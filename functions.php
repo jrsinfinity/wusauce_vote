@@ -17,8 +17,7 @@ function valid_vote( $input ){
         return false;
     }
     require('choices.php');
-    // Note that we do integer, not string, keys
-	return in_array( intval( $input ) , $choices );
+	return in_array( $input , $choices );
 }
 
 /*
@@ -43,7 +42,7 @@ function sms_choices( ){
 	$sms = "Text the number to vote:";
     require('choices.php');
 	foreach ($choices as $number => $choice) {
-	    $sms .=  " $number for $choice, ";
+	    $sms .=  " $number -> $choice, ";
 	}
 	return $sms;
 }
