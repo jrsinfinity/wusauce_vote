@@ -1,4 +1,5 @@
 <?php
+require('choices.php');
 
 /*
 Cleans up the input text and removes
