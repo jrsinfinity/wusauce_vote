@@ -22,7 +22,7 @@ to text-to-voice optimized string
 */
 function voice_choices( ){
 	$voicemail = "Text the number to enter, or text help to see the choices.";
-
+    require('choices.php');
     foreach ( $choices as $number => $choice ){
 	    $voicemail .=  " Text " . $number . " for $choice.";
 	}
@@ -38,7 +38,7 @@ function sms_choices( ){
 	$sms = "Text the number to vote:";
 
 	foreach ($choices as $number => $choice) {
-	    $sms .=  " $number => $choice";
+	    $sms .=  " $number => $choice ";
 	}
 	return $sms;
 }

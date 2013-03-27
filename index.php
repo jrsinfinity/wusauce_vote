@@ -22,7 +22,7 @@
     <div class="container">
     <div class="row">
      <div class="span6 offset3">
-      <center><h1><?php echo getenv('TWILIO_NUMBER'); ?></h1></center>
+      <center><h1><?php echo getenv( 'TWILIO_NUMBER' ); ?></h1></center>
 
       <div class="">
         <table class="table table-hover">
