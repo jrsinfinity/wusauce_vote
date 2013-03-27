@@ -23,8 +23,8 @@ to text-to-voice optimized string
 function voice_choices( ){
 	$voicemail = "Text the number to enter, or text help to see the choices.";
 
-    foreach ($choices as $number => $choice) {
-	    $voicemail .=  " Text $number for $choice.";
+    foreach ( $choices as $number => $choice ){
+	    $voicemail .=  " Text " . $number . " for $choice.";
 	}
 	return $voicemail;
 }
@@ -47,7 +47,7 @@ function sms_choices( ){
 *  Sends a text message to a specific number via Twilio.
 *  Requires a message, a registered Twilio phone number, and a recipient's phone number 
 */
-function send_text($to, $message ){
+function send_text( $to , $message ){
 	// Step 1: Download the Twilio-PHP library from twilio.com/docs/libraries, 
     // and move it into the folder containing this file.
     require "twilio/Services/Twilio.php";
