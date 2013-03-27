@@ -58,7 +58,7 @@ function vote( $number , $vote ){
     if ( has_voted( $number ) ){
         update_vote( $number , $vote );
         confirm_updated_vote( $number, $vote );
-    } else {
+    }else{
         new_vote( $number , $vote );
         confirm_new_vote( $number , $vote );
     }
