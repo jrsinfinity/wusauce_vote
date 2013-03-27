@@ -22,7 +22,6 @@ $from = (string)numeric_regex( $_REQUEST[ 'From' ] );  // SENDER (their number)
 $message =  (string)clean_vote( $_REQUEST[ 'Body' ] );
 // This is the heart of the whole application!
 if ( valid_vote( $message ) ){
-	echo "valid vote";
 	vote( $from, $message); 
 }
 elseif ( !empty($from) ){ 

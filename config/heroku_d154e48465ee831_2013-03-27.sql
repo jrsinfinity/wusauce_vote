@@ -7,7 +7,7 @@
 #
 # Host: us-cdbr-east-03.cleardb.com (MySQL 5.5.28-log)
 # Database: heroku_d154e48465ee831
-# Generation Time: 2013-03-27 14:49:02 +0000
+# Generation Time: 2013-03-27 21:27:31 +0000
 # ************************************************************
 
 
@@ -24,9 +24,8 @@
 # ------------------------------------------------------------
 
 CREATE TABLE `votes` (
-  `number` int(10) NOT NULL,
   `vote` int(1) NOT NULL,
-  PRIMARY KEY (`number`),
+  `number` bigint(10) NOT NULL,
   UNIQUE KEY `number` (`number`),
   KEY `vote` (`vote`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
