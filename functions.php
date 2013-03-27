@@ -17,7 +17,7 @@ function valid_vote( $input ){
         return false;
     }
     require('choices.php');
-	return in_array( $input , $choices );
+	return array_key_exists( $input , $choices );
 }
 
 /*
