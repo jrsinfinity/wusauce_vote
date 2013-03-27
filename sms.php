@@ -21,8 +21,7 @@ require_once( 'application.php' );
 $from = numeric_regex( $_POST[ 'From' ] );  // SENDER (their number)
 $message =  clean_vote( $_POST[ 'Body' ] );
 
-
-}
+// This is the heart of the whole application!
 if ( valid_vote( $message ) ){
 	vote( $number, $vote ); 
 
