@@ -5,6 +5,7 @@ Check whether a telephone number has voted
 */
 function has_voted( $number ){ 
 	$query = "select count(*) from votes where number = $number";
+    echo $query."<br />";
 	dbOpen();
     $attempt = mysql_query( $query );
     if( $attempt ){
@@ -28,6 +29,7 @@ Insert a new vote for a new number
 */
 function new_vote( $number , $vote ){
 	$query = "insert into votes values ( $number , $vote )";
+    echo $query."<br />";
 	dbOpen();
 	return mysql_query( $query );
 }
@@ -37,6 +39,8 @@ Update a vote for a number that has already voted
 */
 function update_vote( $number, $vote ){
 	$query = "update votes set vote =  $vote where number = $number";
+        echo $query."<br />";
+
 	dbOpen();
 	return mysql_query( $query );
 }
