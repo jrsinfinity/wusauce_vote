@@ -85,8 +85,8 @@ Send a text to a user telling them that their vote is confirmed
 */
 function confirm_new_vote( $number , $vote ){
     $team = $choices[ $number ];
-    $message = "Your vote for $team has been recorded. Text 'Help' for all the choices. " 
-    send_text($number, $message );
+    $message = "Your vote for $team has been recorded. Text 'Help' for all the choices.";
+    send_text( $number, $message );
 
 }
 
