@@ -6,8 +6,9 @@
 
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+    require('application.php');
 ?>
 
 <Response>
-    <Say>Say this if the Twilio phone number is called</Say>
+    <Say><?php echo voice_choices(); ?></Say>
 </Response>
