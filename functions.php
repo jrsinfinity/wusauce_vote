@@ -13,6 +13,7 @@ function clean_vote( $input ){
 Boolean - Checks whether a given text is a vote. 
 */
 function valid_vote( $input ){
+    require_once('choices.php');
 	return in_array( $input , $choices );
 }
 
