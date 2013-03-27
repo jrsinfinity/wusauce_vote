@@ -85,7 +85,7 @@ Send a text to a user telling them that their vote is confirmed
 */
 function confirm_new_vote( $number , $vote ){
     $team = $choices[ $number ];
-    $message = "Your vote for $team has been recorded. Text 'Help' for all the choices.";
+    $message = "Your vote for " . $team . " has been recorded. Text 'Help' for all the choices.";
     return send_text( $number, $message );
 
 }
@@ -96,7 +96,7 @@ Send a text to a user telling them that their vote is updated
 function confirm_updated_vote( $number , $vote ){ 
     $team = $choices[ $number ];
     $message = "Your vote has been updated to $team. Text 'Help' for all the choices. " 
-    send_text($number, $message );
+    send_text( $number , $message );
 
 }
 
