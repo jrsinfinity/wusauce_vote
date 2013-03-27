@@ -11,7 +11,7 @@ function has_voted( $number ){
         // PHP sucks for returning a single mysql value
         $count = mysql_fetch_array( $attempt );
         mysql_close();
-        return $count; 
+        return $count[0]; 
         // if count 1 -> true
         // if count 0 -> false
     }
@@ -48,7 +48,7 @@ function count_votes( $choice ){
         // PHP sucks for returning a single mysql value
         $count = mysql_fetch_array( $attempt );
         mysql_close();
-        return $count; 
+        return $count[0]; 
     }
     // Query didn't work 
     echo "Error with counting votes";
