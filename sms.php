@@ -21,10 +21,16 @@ require_once( 'application.php' );
 $from = numeric_regex( $_POST[ 'From' ] );  // SENDER (their number)
 $message =  clean_vote( $_POST[ 'Body' ] );
 
+
+}
 if ( valid_vote( $message ) ){
 	vote( $number, $vote ); 
-} else {
+
+elseif ( !empty($from) { 
 	send_voting_choices( $from );
+} else {
+	// no number specified - incorrect API call
+	exit();
 }
 
 
