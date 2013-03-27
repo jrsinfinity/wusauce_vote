@@ -53,3 +53,13 @@ function count_votes( $choice ){
     // Query didn't work 
     echo "Error with counting votes";
 }
+
+function vote( $number , $vote ){
+    if has_voted( $number ){
+        update_vote( $number , $vote );
+        confirm_updated_vote( $number, $vote );
+    } else {
+        new_vote( $number , $vote );
+        confirm_new_vote( $number , $vote );
+    }
+}
