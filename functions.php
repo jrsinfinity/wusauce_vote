@@ -43,7 +43,7 @@ function sms_choices( ){
 	$sms = "Text the number to vote:";
     require('choices.php');
 	foreach ($choices as $number => $choice) {
-	    $sms .=  " $number => $choice ";
+	    $sms .=  " $number for $choice, ";
 	}
 	return $sms;
 }
