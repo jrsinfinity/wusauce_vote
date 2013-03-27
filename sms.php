@@ -23,7 +23,7 @@ $message =  (string)clean_vote( $_REQUEST[ 'Body' ] );
 // This is the heart of the whole application!
 if ( valid_vote( $message ) ){
 	echo "valid vote";
-	vote( $number, $vote ); 
+	vote( $from, $message); 
 }
 elseif ( !empty($from) ){ 
 	send_voting_choices( $from );
