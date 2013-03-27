@@ -1,5 +1,4 @@
 <?php
-require('choices.php');
 
 /*
 Cleans up the input text and removes
@@ -24,7 +23,7 @@ to text-to-voice optimized string
 function voice_choices( ){
 	$voicemail = "Text the number to enter, or text help to see the choices.";
 
-	foreach( $choices as $number => $choice ){
+	foreach ( $choices as $number => $choice ){
 	    $voicemail .=  " Text $number for $choice.";
 	}
 	return $voicemail;
