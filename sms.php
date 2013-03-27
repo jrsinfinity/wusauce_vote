@@ -23,10 +23,7 @@ $from = numeric_regex( $_POST[ 'From' ] );  // SENDER (their number)
 $message =  clean_vote( $_POST[ 'Body' ] );
 
 if valid_vote( $message ) {
-	if has_voted( $number ) {
-		vote( $number, $vote ); 
-	}
-
+	vote( $number, $vote ); 
 } else {
 	send_voting_choices( $from );
 }
