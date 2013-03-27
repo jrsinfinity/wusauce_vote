@@ -25,7 +25,7 @@ Returns available votes from the array
 to text-to-voice optimized string
 */
 function voice_choices( ){
-	$voicemail = "Text the number to enter, or text help to see the choices.";
+	$voicemail = "Text this number to enter, or text help to see the choices.";
     require('choices.php');
     foreach ( $choices as $number => $choice ){
 	    $voicemail .=  " Text " . $number . " for $choice.";
@@ -39,7 +39,7 @@ Returns available votes from the array
 to SMS-optimized string
 */
 function sms_choices( ){
-	$sms = "Text the number to vote:";
+	$sms = "Text this number to vote:";
     require('choices.php');
 	foreach ($choices as $number => $choice) {
 	    $sms .=  " $number -> $choice, ";
@@ -90,7 +90,7 @@ Send a text to a user telling them that their vote is confirmed
 function confirm_new_vote( $number , $vote ){
     require('choices.php');
     $team = $choices[ $vote ];
-    $message = "Your vote for " . $team . " has been recorded. Text 'Help' for all the choices.";
+    $message = "Your vote for " . $team . " has been recorded. Text 'Vote' for all the choices.";
     return send_text( $number, $message );
 
 }
@@ -101,7 +101,7 @@ Send a text to a user telling them that their vote is updated
 function confirm_updated_vote( $number , $vote ){ 
     require('choices.php');
     $team = $choices[ $vote ];
-    $message = "Your vote has been updated to " . $team . " Text 'Help' for all the choices.";
+    $message = "Your vote has been updated to " . $team . " Text 'Vote' for all the choices.";
     send_text( $number , $message );
 
 }
