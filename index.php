@@ -22,6 +22,9 @@
     <div class="container">
     <div class="row">
      <div class="span6 offset3">
+      <h1><?php echo getenv('TWILIO_NUMBER'); ?></h1>
+
+      <div class="well">
         <table>
           <tr>
             <th class="span1">ID</th>
@@ -39,6 +42,7 @@
           }
           ?>
         </table>
+      </div>
      </div>
    </div>
   </body>
