@@ -22,7 +22,7 @@ function has_voted( $number ){
 /*
 Insert a new vote for a new number
 */
-function new_vote( $number , $vote ){
+function new_vote( $number , $vote ){h
 	$query = "insert into votes values ($number, $vote)";
 	dbOpen();
 	return mysql_query( $query );
