@@ -21,8 +21,8 @@ require_once( 'application.php' );
 $from = (string)numeric_regex( $_REQUEST[ 'From' ] );  // SENDER (their number)
 $message =  (string)clean_vote( $_REQUEST[ 'Body' ] );
 // This is the heart of the whole application!
-echo valid_vote($message);
 if ( valid_vote( $message ) ){
+	echo "valid vote";
 	vote( $number, $vote ); 
 }
 elseif ( !empty($from) ){ 
