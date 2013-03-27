@@ -15,14 +15,13 @@
     header( "content-type: text/xml" );
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 
-// essentials.php contains everything else I have provided
 require_once( 'application.php' );
 
 // securely parse input.
 $from = numeric_regex( $_POST[ 'From' ] );  // SENDER (their number)
 $message =  clean_vote( $_POST[ 'Body' ] );
 
-if valid_vote( $message ) {
+if ( valid_vote( $message ) ){
 	vote( $number, $vote ); 
 } else {
 	send_voting_choices( $from );
