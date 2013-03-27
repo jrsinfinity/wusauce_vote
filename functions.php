@@ -16,7 +16,7 @@ function valid_vote( $input ){
     if ( empty( $input ) ) {
         return false;
     }
-    require_once('choices.php');
+    require('choices.php');
 	return in_array( $input , $choices );
 }
 
