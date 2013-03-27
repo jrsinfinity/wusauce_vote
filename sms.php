@@ -18,8 +18,8 @@
 require_once( 'application.php' );
 
 // securely parse input.
-$from = numeric_regex( $_POST[ 'From' ] );  // SENDER (their number)
-$message =  clean_vote( $_POST[ 'Body' ] );
+$from = numeric_regex( $_REQUEST[ 'From' ] );  // SENDER (their number)
+$message =  clean_vote( $_REQUEST[ 'Body' ] );
 
 // This is the heart of the whole application!
 if ( valid_vote( $message ) ){
